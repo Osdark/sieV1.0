@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'sieData',
         'USER': 'root',
-        'PASSWORD': '12345678'
+        'PASSWORD': '12345sie'
     }
 }
 
