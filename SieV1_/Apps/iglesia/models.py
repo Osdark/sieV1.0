@@ -14,6 +14,7 @@ class Iglesia(models.Model):
 
 class Grupo_Pequeño(models.Model):
     nombre = models.CharField(max_length=120, blank=True, null=True)
+    iglesia = models.ForeignKey(Iglesia, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre
