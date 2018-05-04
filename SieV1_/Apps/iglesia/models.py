@@ -19,5 +19,5 @@ class Grupo_Pequeño(models.Model):
         return self.nombre
 
     class Meta:
-        verbose_name = "Grupo"
-        verbose_name_plural = "Grupos"
+        verbose_name = "Grupo pequeño"
+        verbose_name_plural = "Grupos pequeños"
