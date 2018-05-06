@@ -32,7 +32,7 @@ class Usuario(models.Model):
 
 
     def __str__(self):
-        return self.title
+        return self.nombre
 
     class Meta:
         verbose_name = "Usuario"
