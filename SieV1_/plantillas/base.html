@@ -8,28 +8,28 @@
     <title>{% block title %}{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
-	<link rel='stylesheet' href='{% static "css/base.css" %}'>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 <!--===============================================================================================-->
 
   </head>
 
   <header>
 
-      {% block menu %}{% endblock %}
+      {% block menu %}
+
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="generic.html">Generic</a>
+						<a href="elements.html">Elements</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+	  {% endblock %}
 
   </header>
 
@@ -40,27 +40,47 @@
 
   </body>
 
-  <footer>
+   	{% block footer %}
 
-   {% block footer %}{% endblock %}
+	  <!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
 
-  </footer>
+					<h3>Get in touch</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+					</div>
+
+				</div>
+			</footer>
+
+	{% endblock %}
+
 
 <!--===============================================================================================-->
-	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
-	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/tilt/tilt.jquery.min.js' %}"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+  	<script src="{% static 'assets/js/skel.min.js' %}"></script>
+  	<script src="{% static 'assets/js/util.js' %}"></script>
+  	<script src="{% static 'assets/js/main.js' %}"></script>
 
 </html>
